@@ -1,0 +1,47 @@
+{
+    "id": "",
+    "name": "runscopetesthelper",
+    "friendlyName": "Task for Runscope integration Tests",
+    "description": "Allows you to run url triggers from the runscope inside your pipeline and present the result",
+    "helpMarkDown": "[More Information](https://github.com/ramsessacol/runscope-helper-azure-ext)",
+    "author": "Ramses Almeida",
+    "preview": false,
+    "showEnvironmentVariables": true,
+    "instanceNameFormat" : "Runscope Integration Test",
+    "category": "Test",
+    "version": {
+      "Major": 1,
+      "Minor": 0,
+      "Patch": 0
+    },
+    "groups": [
+      {
+          "name": "advanced",
+          "displayName": "Advanced",
+          "isExpanded": false
+      }
+    ],
+    "inputs": [
+      {
+        "name": "triggerUrl",
+        "type": "string",
+        "label": "Trigger URL",
+        "defaultValue": "",
+        "required": true,
+        "helpMarkDown": "[Trigger URL to run your runscope tests](https://www.runscope.com/docs/api-testing/integrations/)"
+      },
+      {
+        "name": "accessToken",
+        "type": "string",
+        "label": "API Key",
+        "defaultValue": "",
+        "required": true,
+        "helpMarkDown": "[Runscope API Key](https://www.runscope.com/docs/api-testing/circleci/#api-key)"
+      }
+    ],
+    "execution": {
+      "Node": {
+        "target": "index.js"
+      }
+    }
+  }
